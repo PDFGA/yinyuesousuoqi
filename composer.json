@@ -1,0 +1,18 @@
+{
+    "name": "maicong/music",
+    "description": "音乐搜索器 - 多站合一音乐搜索解决方案",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "MaiCong",
+            "email": "i@maicong.me",
+            "homepage": "https://maicong.me"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "ext-curl": "*",
+        "ext-json": "*"
+    }
+}

@@ -1,0 +1,592 @@
+/* 现代化样式 */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #ffffff;
+}
+
+.am-container {
+    max-width: 1400px !important;
+    padding: 0 30px;
+}
+
+.music-main {
+    padding: 40px 30px;
+    background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
+    min-height: 100vh;
+}
+
+/* 标题样式 */
+.music-main h1 {
+    font-size: 2.8em;
+    margin: 40px 0 20px;
+    color: #2c3e50;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+.music-main h2 {
+    font-size: 1.4em;
+    color: #34495e;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+/* 平台选择按钮样式 */
+.music-type {
+    margin: 30px 0;
+}
+
+.am-radio-inline {
+    position: relative;
+    padding-left: 0 !important;
+    margin: 5px 8px !important;
+    display: inline-block;
+}
+
+.music-type label {
+    font-size: 1.1em;
+    margin: 10px 15px;
+}
+
+/* 按钮基础样式 */
+.am-radio-inline input[type="radio"] {
+    display: none !important;
+}
+
+.am-radio-inline .radio-label {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: #f5f7fa;
+    color: #666;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid #e8e8e8;
+    user-select: none;
+    position: relative;
+    z-index: 1;
+}
+
+/* 选中效果 */
+.am-radio-inline input[type="radio"]:checked + .radio-label {
+    background: #3498db;
+    color: #fff;
+    border-color: #3498db;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(52, 152, 219, 0.2);
+}
+
+/* 悬停效果 */
+.am-radio-inline .radio-label:hover {
+    background: #e8e8e8;
+    border-color: #e8e8e8;
+}
+
+.am-radio-inline input[type="radio"]:checked + .radio-label:hover {
+    background: #2980b9;
+    border-color: #2980b9;
+}
+
+/* 爆炸动画效果 */
+@keyframes ripple {
+    0% {
+        box-shadow: 0 0 0 0 rgba(52, 152, 219, 0.3);
+    }
+    100% {
+        box-shadow: 0 0 0 20px rgba(52, 152, 219, 0);
+    }
+}
+
+.am-radio-inline input[type="radio"]:checked + .radio-label {
+    animation: ripple 0.6s ease-out;
+}
+
+/* 移动端适配 */
+@media only screen and (max-width: 640px) {
+    .am-radio-inline {
+        margin: 4px 6px !important;
+    }
+
+    .am-radio-inline .radio-label {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+}
+
+/* 搜索框样式 */
+.music-input input {
+    height: 48px;
+    border-radius: 12px;
+    border: 2px solid #e0e0e0;
+    padding: 0 20px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.music-input input:focus {
+    border-color: #3498db;
+    box-shadow: 0 2px 12px rgba(52,152,219,0.15);
+    outline: none;
+}
+
+/* 搜索按钮样式 */
+#j-submit {
+    height: 48px;
+    padding: 0 30px;
+    font-size: 16px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(52,152,219,0.3);
+    margin-top: 20px;
+}
+
+#j-submit:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(52,152,219,0.4);
+}
+
+/* 帮助区域样式 */
+.music-tips {
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin: 30px 0;
+}
+
+.music-tips.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.music-tips h4 {
+    color: #34495e;
+    font-size: 1.3em;
+    margin: 0 0 15px 0;
+    font-weight: 500;
+}
+
+.music-tips p {
+    color: #666;
+    font-size: 1.1em;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.music-tips b {
+    color: #e74c3c;
+    font-weight: 500;
+}
+
+.music-tips strong {
+    color: #34495e;
+    font-weight: 500;
+}
+
+.music-tips u {
+    text-decoration: none;
+    border-bottom: 1px solid #3498db;
+    color: #3498db;
+    padding-bottom: 1px;
+}
+
+.music-tips blockquote {
+    margin: 15px 0 0;
+    padding: 20px;
+    border-left: 4px solid #3498db;
+    background: #f8f9fa;
+    border-radius: 0 8px 8px 0;
+}
+
+.music-tips blockquote p {
+    margin: 8px 0;
+    color: #666;
+    font-size: 13px;
+}
+
+.music-tips blockquote span {
+    display: inline-block;
+    width: 60px;
+    color: #34495e;
+    font-weight: 500;
+}
+
+.music-overflow {
+    max-height: 165px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.music-overflow::-webkit-scrollbar {
+    width: 4px;
+}
+
+.music-overflow::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+}
+
+.music-overflow::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/* 搜索结果样式 */
+#j-main {
+    display: none;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+}
+
+.music-show {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* APlayer 播放器样式优化 */
+.aplayer {
+    margin: 30px 0;
+    font-size: 1.1em;
+    background: #fff !important;
+    border: none !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
+    border-radius: 12px !important;
+    overflow: hidden;
+}
+
+.aplayer .aplayer-pic {
+    height: 86px !important;
+    width: 86px !important;
+}
+
+.aplayer .aplayer-info {
+    margin-left: 86px !important;
+    padding: 14px 7px 0 10px !important;
+    border: none !important;
+    background: transparent !important;
+    height: 86px !important;
+}
+
+.aplayer.aplayer-withlist .aplayer-info {
+    border-bottom: none !important;
+}
+
+.aplayer .aplayer-info .aplayer-music {
+    padding: 0 15px 0 0 !important;
+    margin-bottom: 12px;
+}
+
+.aplayer .aplayer-info .aplayer-controller {
+    margin-top: 0 !important;
+    position: relative;
+}
+
+.aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap {
+    margin: 0 0 4px 0 !important;
+}
+
+.aplayer .aplayer-list {
+    margin-top: 0 !important;
+    padding: 0 !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.05) !important;
+}
+
+.aplayer .aplayer-list ol {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.aplayer .aplayer-list ol li {
+    border-top: none !important;
+    padding: 10px 15px !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+}
+
+/* 返回按钮样式优化 */
+#j-back {
+    margin: 0 0 15px 0 !important;
+    background: #2ecc71 !important;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    padding: 12px 24px;
+    box-shadow: 0 2px 6px rgba(46, 204, 113, 0.3);
+    width: 100%;
+    text-align: center;
+    display: block;
+}
+
+/* 响应式布局优化 */
+@media only screen and (max-width: 640px) {
+    #j-main {
+        margin: 15px;
+        padding: 15px;
+        width: auto;
+    }
+
+    .aplayer .aplayer-pic {
+        height: 66px !important;
+        width: 66px !important;
+    }
+
+    .aplayer .aplayer-info {
+        margin-left: 66px !important;
+        height: 66px !important;
+    }
+
+    .aplayer .aplayer-info .aplayer-music {
+        margin-bottom: 8px;
+    }
+
+    .aplayer .aplayer-info .aplayer-controller .aplayer-time {
+        font-size: 12px !important;
+    }
+
+    .aplayer .aplayer-list ol li {
+        padding: 8px 10px !important;
+    }
+}
+
+/* 响应式调整 */
+@media only screen and (max-width: 640px) {
+    .music-main h1 {
+        font-size: 2.2em;
+    }
+    
+    .music-main h2 {
+        font-size: 1.2em;
+    }
+    
+    .music-type label {
+        flex: 0 1 calc(50% - 12px);
+    }
+    
+    .music-tips {
+        padding: 20px;
+    }
+    
+    .music-show {
+        padding: 15px;
+    }
+    
+    .aplayer .aplayer-info .aplayer-controller .aplayer-volume-wrap {
+        display: none !important;
+    }
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.music-main > div {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* 音乐信息卡片样式 */
+.music-info-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    margin: 0 0 25px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.music-info-card .info-item {
+    margin: 0;
+}
+
+.music-info-card label {
+    display: block;
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+
+.music-info-card .input-group {
+    display: flex;
+    align-items: center;
+    background: #f5f7fa;
+    border-radius: 6px;
+    border: 1px solid #e8e8e8;
+}
+
+.music-info-card .input-group input {
+    flex: 1;
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #333;
+    height: 36px;
+}
+
+.music-info-card .input-group .copy-btn {
+    padding: 0 12px;
+    height: 36px;
+    line-height: 36px;
+    color: #3498db;
+    text-decoration: none;
+    border-left: 1px solid #e8e8e8;
+    transition: all 0.3s ease;
+}
+
+.music-info-card .input-group .copy-btn:hover {
+    background: #f0f0f0;
+    color: #2980b9;
+}
+
+.music-info-card .input-group .copy-btn i {
+    font-size: 16px;
+}
+
+/* 响应式调整 */
+@media only screen and (max-width: 768px) {
+    .music-info-card {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .music-info-card label {
+        font-size: 13px;
+    }
+
+    .music-info-card .input-group input {
+        font-size: 13px;
+        padding: 6px 10px;
+        height: 32px;
+    }
+
+    .music-info-card .input-group .copy-btn {
+        padding: 0 10px;
+        height: 32px;
+        line-height: 32px;
+    }
+
+    .music-info-card .input-group .copy-btn i {
+        font-size: 14px;
+    }
+}
+
+/* 页面布局 */
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+}
+
+.main-container {
+    flex: 1 0 auto;
+    padding-bottom: 60px;
+    background: #ffffff;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* 页脚样式 */
+.footer {
+    flex-shrink: 0;
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+    padding: 20px 0;
+    margin-top: auto;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer .version {
+    color: #3498db;
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+.footer .copyright {
+    color: #666;
+    margin-right: 10px;
+}
+
+.footer a {
+    color: #34495e;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    margin: 0 8px;
+    position: relative;
+}
+
+.footer a:hover {
+    color: #3498db;
+}
+
+.footer a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: #3498db;
+    transform: scaleX(0);
+    transition: transform 0.2s ease;
+}
+
+.footer a:hover:after {
+    transform: scaleX(1);
+}

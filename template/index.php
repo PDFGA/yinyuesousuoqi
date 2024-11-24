@@ -84,6 +84,9 @@ if (!defined('MC_CORE')) {
                             <input id="j-input" data-filter="name" class="am-form-field am-input-lg am-text-center am-radius" placeholder="例如: 不要说话 陈奕迅" data-am-loading="{loadingText: ' '}" pattern="^.+$" required>
                             <div class="am-alert am-alert-danger am-animation-shake"></div>
                         </div>
+                        <div class="am-form-group am-text-center">
+                            <button id="j-submit" type="submit" class="am-btn am-btn-primary am-btn-lg am-btn-block am-radius">搜一下</button>
+                        </div>
                         <div id="j-type" class="am-form-group am-text-center music-type">
                         <?php foreach ($music_type_list as $key => $val) { ?>
                             <label class="am-radio-inline">

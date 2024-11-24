@@ -175,6 +175,10 @@ if (!defined('MC_CORE')) {
             <div class="am-popup-bd">
                 <p>本站音频文件来自各网站接口，本站不会修改任何音频文件</p>
                 <p>音频版权来自各网站，本站只提供数据查询服务，不提供任何音频存储和贩卖服务</p>
+                <p>如有侵权或联系赞助添加微信：</p>
+                <div class="am-text-center">
+                    <img src="/static/img/IMG_4525.JPG" alt="微信二维码" style="max-width: 200px;">
+                </div>
             </div>
         </div>
     </div>

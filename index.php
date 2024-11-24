@@ -50,16 +50,7 @@ $music_type_list = array(
     'netease'    => '网易云音乐',
     'qq'         => 'QQ音乐',
     'kugou'      => '酷狗音乐',
-    'kuwo'       => '酷我音乐',
-    'xiami'      => '虾米音乐',
-    'baidu'      => '百度音乐',
-    'migu'       => '咪咕音乐',
-    'lizhi'      => '荔枝FM',
-    'qingting'   => '蜻蜓FM',
-    'ximalaya'   => '喜马拉雅',
-    'kg'         => '全民K歌',
-    '5singyc'    => '5sing原创',
-    '5singfc'    => '5sing翻唱'
+    'kuwo'       => '酷我音乐'
 );
 
 if (server('HTTP_X_REQUESTED_WITH') === 'XMLHttpRequest') {

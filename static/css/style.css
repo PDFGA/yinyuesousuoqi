@@ -57,6 +57,29 @@ a {
   border-color: #ccc;
   color: #222;
 }
+.music-type {
+  margin: 15px 0;
+}
+.music-type label {
+  margin: 0 10px 10px 10px;
+  display: inline-block;
+}
+.music-type label input:checked + .radio-label {
+  background-color: #0e90d2;
+  color: #fff;
+}
+.music-type .radio-label {
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 2px;
+  background-color: #eee;
+  cursor: pointer;
+  transition: all .2s;
+}
+.music-type .radio-label:hover {
+  background-color: #0e90d2;
+  color: #fff;
+}
 .music-type .am-radio-inline,
 .music-type label {
   color: #7f8c8d;

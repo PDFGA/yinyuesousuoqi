@@ -87,6 +87,9 @@ if (!defined('MC_CORE')) {
                         <div class="am-form-group am-text-center">
                             <button id="j-submit" type="submit" class="am-btn am-btn-primary am-btn-lg am-btn-block am-radius">搜一下</button>
                         </div>
+                        <div class="am-text-center am-margin-vertical-sm">
+                            <span class="am-text-secondary">支持平台：</span>
+                        </div>
                         <div id="j-type" class="am-form-group am-text-center music-type">
                         <?php foreach ($music_type_list as $key => $val) { ?>
                             <label class="am-radio-inline">
